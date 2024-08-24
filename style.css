@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,34 +8,91 @@
 }
 
 body {
-    background : #081b29
+    background: #0c273b;
 }
+
 .Header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #081a28;
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pemisah dengan shadow */
 }
-.logo{
+
+.Header.scrolled {
+    background-color: #0a2a3d; /* Warna yang lebih gelap saat menggulir */
+}
+
+.logo {
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
 }
+
 .navbar a {
-    font-size:  18px;
-    color : #ededed;
+    font-size: 18px;
+    color: #ededed;
+    position: relative;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-   transition: .3s;  
+    transition: .3s;
 }
-.navbar a:hover,
-.navbar a.active {
-    color: #00abf0;
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00abf0;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+.home {
+    margin-top: 100px;
+    padding: 20px 10%;
+    color: #ededed;
+}
+
+.home h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.home h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00abf0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btn-box a:hover {
+    background-color: #0089c7;
 }

@@ -11,6 +11,7 @@ body {
     background: #0c273b;
 }
 
+/* Header */
 .Header {
     position: fixed;
     top: 0;
@@ -22,11 +23,11 @@ body {
     justify-content: space-between;
     z-index: 100;
     transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pemisah dengan shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .Header.scrolled {
-    background-color: #0a2a3d; /* Warna yang lebih gelap saat menggulir */
+    background-color: #0a2a3d;
 }
 
 .logo {
@@ -62,10 +63,18 @@ body {
     width: 100%;
 }
 
+/* Home Section */
 .home {
     margin-top: 100px;
     padding: 20px 10%;
     color: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-text {
+    flex: 1;
 }
 
 .home h1 {
@@ -83,6 +92,10 @@ body {
     margin-bottom: 20px;
 }
 
+.btn-box {
+    margin-top: 20px;
+}
+
 .btn-box a {
     display: inline-block;
     padding: 10px 20px;
@@ -96,3 +109,19 @@ body {
 .btn-box a:hover {
     background-color: #0089c7;
 }
+
+/* Photo Styling */
+.photo {
+    flex: 1; /* Allows the image to take some space but not too much */
+    display: flex;
+    justify-content: flex-end; /* Aligns the image to the right *
+}
+
+.photo img {
+    width: 200px; /* Adjust the width of the image */
+    height: auto;
+    border-radius: 10px;
+    display: block; /* Ensure no space under the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for the image */
+}
+

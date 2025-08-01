@@ -1,127 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* ---------- COLOUR PALETTE ---------- */
+:root {
+    --dark-blue: #0a1a2e;           /* header & footer */
+    --body-grad-top: #02243e;      /* body gradient start */
+    --body-grad-bottom: #1c2a40;   /* body gradient end */
+    --accent: #00c2ff;
+    --text: #f5f5f5;
+    --card-bg: rgba(4, 5, 43, 0.6);/* transparent cards */
 }
 
+/* ---------- GLOBAL ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+html { scroll-behavior: smooth; }
 body {
-    background: #0c273b;
+    background: linear-gradient(135deg, var(--body-grad-top) 0%, var(--body-grad-bottom) 100%);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-/* Header */
-.Header {
+/* ---------- HEADER ---------- */
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: #081a28;
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.Header.scrolled {
-    background-color: #0a2a3d;
-}
-
-.logo {
-    font-size: 25px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.navbar a {
-    font-size: 18px;
-    color: #ededed;
-    position: relative;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-
-.navbar a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #00abf0;
-    left: 0;
-    bottom: -5px;
-    transition: width 0.3s;
-}
-
-.navbar a:hover::after,
-.navbar a.active::after {
-    width: 100%;
-}
-
-/* Home Section */
-.home {
-    margin-top: 100px;
-    padding: 20px 10%;
-    color: #ededed;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--dark-blue);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
 }
-
-.home-text {
-    flex: 1;
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--accent);
 }
-
-.home h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.home h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.home p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.btn-box {
-    margin-top: 20px;
-}
-
-.btn-box a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00abf0;
-    color: white;
+.navbar a {
+    color: var(--text);
+    margin-left: 30px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
+    font-weight: 400;
+    transition: color .3s ease;
 }
+.navbar a:hover { color: var(--accent); }
 
-.btn-box a:hover {
-    background-color: #0089c7;
-}
-
-/* Photo Styling */
-.photo {
-    flex: 1; /* Allows the image to take some space but not too much */
+/* ---------- HOME ---------- */
+.home {
+/* ---------- HOME with background ---------- */
+.home{
+    height: 100vh;
     display: flex;
-    justify-content: flex-end; /* Aligns the image to the right *
-}
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8%;
 
+    /* background image di balik seluruh section home */
+    background-image: url('bg.jpg');
+    background-size: cover;        /* agar gambar menutupi seluruh area */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+}
+.home-content h1 { font-size: 42px; margin-bottom: 10px; }
+.home-content span { color: var(--accent); }
+.photo { margin: 30px 0; }
 .photo img {
-    width: 200px; /* Adjust the width of the image */
-    height: auto;
-    border-radius: 10px;
-    display: block; /* Ensure no space under the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for the image */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+}
+.btn-box { display: flex; gap: 20px; justify-content: center; }
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform .3s ease;
+}
+.btn.primary { background: var(--accent); color: var(--dark-blue); }
+.btn.ghost { border: 2px solid var(--accent); color: var(--accent); }
+.btn:hover { transform: scale(1.05); }
+
+/* ---------- SECTIONS ---------- */
+section { padding: 80px 8%; }
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--accent);
+}
+.about p {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
 }
 
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+.skill-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-item h3 { font-size: 20px; margin-bottom: 5px; }
+.date {
+    display: block;
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.contact { text-align: center; }
+.socials { margin-top: 25px; }
+.socials a {
+    color: var(--accent);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .3s ease;
+}
+.socials a:hover { opacity: .7; }
+
+footer {
+    background: var(--dark-blue);
+    text-align: left;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+/* ---------- EXPERIENCES LAYOUT ---------- */
+.exp-flex{
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.exp-photo img{
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    flex-shrink: 0;
+}
+
+/* keep your existing .timeline rules */
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px){
+    .exp-flex{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .exp-photo img{ width: 160px; height: 160px;}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .navbar a { margin-left: 15px; font-size: 14px; }
+    .timeline::before { left: 20px; }
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        text-align: left;
+    }
+    .timeline-item:nth-child(even) { left: 0; }
+}

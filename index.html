@@ -1,40 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content=""IE-edge>
-        <meta name="viewport" content="width=device-width">
-        <title>Densite</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="scripts.js"></script>
-    </head>
-    <body>
-        <header class="Header">
-            <a href="#" class = "logo">TAN</a>
-            <nav class="navbar">
-                <a href="home">Home</a>
-                <a href="about">About</a>
-                <a href="skill">Skill</a>
-                <a href="experiences">Experiences</a>
-                <a href="contact">Contact</a>
-            </nav>
-        </header>
-        <section class="home">
-            <div class="home-content">
-                <h1>Hello, I'm Dennytan Raharjo</h1>
-                <h3>Frontend Developer</h3>
-                <p>Physisc Engineering student</p>
-                <div class ="photo">
-                    <div class="kotak-poto">
-                    <img src="denny.jpg" alt="Profile Photo">
-                </div>
-                </div>
-                <div class="btn-box">
-                    <a href="#">Hire me</a>
-                    <a href="#">Hello</a>
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dennytan Raharjo – Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ---------- HEADER ---------- -->
+    <header class="header">
+        <a href="#home" class="logo">TAN</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
+    <!-- ---------- HOME ---------- -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hello, I'm <span>Dennytan Raharjo</span></h1>
+            <p>Physics Engineering Student & Research Assistant</p>
+            <div class="photo">
+                <!-- replace by your own -->
+                <img src="me.jpg" alt="Dennytan Raharjo">
             </div>
-        </section>
-    </body>
+            <div class="btn-box">
+                <a href="#contact" class="btn primary">Hire me</a>
+                <a href="#about"   class="btn ghost">More about me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- ABOUT ---------- -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I’m a final-year Physics Engineering student at <strong>Telkom University</strong> with a passion for quantum science, instrumentation and high-performance computing.  
+            When I’m not teaching in the lab, I’m pushing qubits around at BRIN Quantum or automating physics simulations in Python.
+        </p>
+    </section>
+
+    <!-- ---------- SKILLS ---------- -->
+    <section id="skills" class="skills">
+        <h2>Skills & Tools</h2>
+        <div class="skill-grid">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Matlab / Octave</div>
+            <div class="skill-card">C/C++</div>
+            <div class="skill-card">LaTeX</div>
+            <div class="skill-card">Qiskit / Cirq</div>
+            <div class="skill-card">SolidWorks & CAD</div>
+            <div class="skill-card">LabVIEW</div>
+            <div class="skill-card">Git & Linux</div>
+        </div>
+    </section>
+
+    <!-- ---------- EXPERIENCES ---------- -->
+    <section id="experiences" class="experiences">
+        <h2>Experiences</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Practicum Assistant – Daskom Laboratory</h3>
+                <span class="date">2023 – Present</span>
+                <p>Guiding 50+ students per semester through digital-system practicum modules (FPGA, Verilog, microcontrollers).</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Practicum Assistant – Computational Physics Laboratory</h3>
+                <span class="date">2022 – Present</span>
+                <p>Designed Python/Matlab experiments covering molecular dynamics, Monte-Carlo methods and quantum harmonic oscillators.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Research Intern – BRIN Quantum</h3>
+                <span class="date">2023 – 2024</span>
+                <p>Simulated superconducting-qubit noise models using Qiskit and validated results on IBM Quantum backends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p>If you need a quantum-curious engineer with solid teaching experience, let’s talk!</p>
+        <a href="mailto:dennytan@email.com" class="btn primary">Send Email</a>
+        <div class="socials">
+            <a href="https://linkedin.com/in/dennytan" target="_blank">LinkedIn</a>
+            <a href="https://github.com/dennytan" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer>
+        <p>&copy; 2024 Dennytan Raharjo. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
 </html>

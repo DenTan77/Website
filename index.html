@@ -21,42 +21,43 @@
         </nav>
     </header>
 
+    <main class="container">
     <!-- ---------- HOME ---------- -->
     <section id="home" class="home">
         <div class="home-left">
             <h1>Hello, I'm <span>Dennytan Raharjo</span></h1>
             <p>Physics Engineering Student & Research Assistant</p>
 
-            <div class="hero-center">
 
-            <div class="photo">
-                <img src="Assets/OIP.jpg" alt="Dennytan">
-            </div>
+  <!-- Baris baru: foto + tombol -->
+  <div class="hero-row">
+    <div class="photo">
+      <img src="./Assets/OIP.jpg" alt="apel">
+    </div>
 
-            </div>
-
-            <div class="btn-box">
-            <a href="#contact" class="btn primary">Hire me</a>
-            <a href="#about" class="btn ghost">More about me</a>
-            </div>
+    <div class="btn-box">
+      <a href="https://drive.google.com/file/d/1D_GQ807IxYQjBeeIgQXH2HO2s4BS2gwO/view?usp=sharing" class="btn primary">My CV</a>
+      <a href="#contact" class="btn ghost">More about me</a>
+    </div>
+  </div>
+</div>
         </div>
-
         <div class="home-right">
             <div class="cluster-card">
-            <h4>Web Apps</h4>
-            <span>React & Node</span>
-            </div>
-            <div class="cluster-card">
-            <h4>Data Viz</h4>
-            <span>Python & D3</span>
-            </div>
-            <div class="cluster-card">
             <h4>Research</h4>
-            <span>Lab Automation</span>
+            <span>Material Computation</span>
             </div>
             <div class="cluster-card">
-            <h4>UI / UX</h4>
-            <span>Figma & Blender</span>
+            <h4>Web Framework</h4>
+            <span>React & Next.js</span>
+            </div>
+            <div class="cluster-card">
+            <h4>Machine Learning</h4>
+            <span>TensorFlow & PyTorch</span>
+            </div>
+            <div class="cluster-card">
+            <h4>Internet of Things</h4>
+            <span>Arduino</span>
             </div>
         </div>
     </section>
@@ -65,8 +66,7 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
-            I’m a final-year Physics Engineering student at <strong>Telkom University</strong> with a passion for quantum science, instrumentation and high-performance computing.  
-            When I’m not teaching in the lab, I’m pushing qubits around at BRIN Quantum or automating physics simulations in Python.
+            I’m a final-year Physics Engineering student at <strong>Telkom University</strong> with a passion for material computation, instrumentation, and high performance computing (HPC). My research focuses on the electronic and optical properties of 2D materials using first-principles calculations (DFT, GW, and BSE) with tools such as Quantum ESPRESSO and Yambo. I am particularly interested in excitonic effects and quasiparticle band structures. In addition, I apply machine learning techniques to analyze and predict material properties, integrating data-driven approaches with physics-based simulations. Beyond computational research, I also develop IoT based monitoring systems, combining sensors, and web technologies to build practical instrumentation solutions.
         </p>
     </section>
 
@@ -75,61 +75,106 @@
         <h2>Skills & Tools</h2>
         <div class="skill-grid">
             <div class="skill-card">Python</div>
-            <div class="skill-card">Matlab / Octave</div>
+            <div class="skill-card">Matlab</div>
             <div class="skill-card">C/C++</div>
             <div class="skill-card">LaTeX</div>
-            <div class="skill-card">Qiskit / Cirq</div>
-            <div class="skill-card">SolidWorks & CAD</div>
-            <div class="skill-card">LabVIEW</div>
-            <div class="skill-card">Git & Linux</div>
+            <div class="skill-card">Arduino</div>
+            <div class="skill-card">Quantum ESPRESSO</div>
+            <div class="skill-card">Yambo</div>
+            <div class="skill-card">Next.js</div>
         </div>
     </section>
 
     <!-- ---------- EXPERIENCES ---------- -->
     <section id="experiences" class="experiences">
         <h2>Experiences</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="exp-flex">
-                    <div class="exp-text">
-                        <h3>Practicum Assistant – Daskom Laboratory</h3>
-                        <span class="date">2023 – 2025</span>
-                        <p>Guiding 50+ students per semester through digital-system practicum modules (FPGA, Verilog, microcontrollers).</p>
+        <!-- slider container -->
+        <div class="experience-slider">
+            <div class="slides">
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-photo">
+                            <img src="./Assets/daskom.jpg" alt="Daskom Laboratory" />
+                        </div>
+                        <div class="slide-text">
+                            <h3>Practicum Assistant - Daskom Laboratory</h3>
+                            <span class="date">2023 - 2025</span>
+                            <p>I assisted students in understanding fundamental programming concepts, problem solving techniques, and logical thinking. I was responsible for designing practice exercises and programming assignments for laboratory sessions, ensuring they aligned with learning objectives and progressively challenged students’ analytical skills..</p>
+                        </div>
                     </div>
-                <div class="exp-photo">
-                    <img src="./Assets/OIP.jpg" alt="Practicum lab activity">
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-photo">
+                            <img src="./Assets/comics.jpg" alt="Computational Physics Lab" />
+                        </div>
+                        <div class="slide-text">
+                            <h3>Practicum Coordinator - Computational Physics Laboratory</h3>
+                            <span class="date">2025 &ndash; 2026</span>
+                            <p>Designed Python experiments covering about signal processing including Fast Fourier Transform (FFT), Filtering, and Image Processing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-photo">
+                            <img src="./Assets/brin.jpg" alt="BRIN Quantum" />
+                        </div>
+                        <div class="slide-text">
+                            <h3>Research Intern - BRIN Quantum</h3>
+                            <span class="date">2025</span>
+                            <p>Simulated optical and thermoelectric properties of 2D materials using Quantum ESPRESSO and make Machine learning models to predict material properties.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            <div class="timeline-item">
-                <h3>Practicum Assistant - Computational Physics Laboratory</h3>
-                <span class="date">2022  Present</span>
-                <p>Designed Python/Matlab experiments covering molecular dynamics, Monte-Carlo methods and quantum harmonic oscillators.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Research Intern - BRIN Quantum</h3>
-                <span class="date">2023 - 2024</span>
-                <p>Simulated superconducting-qubit noise models using Qiskit and validated results on IBM Quantum backends.</p>
-            </div>
+        <div class="slider-nav">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
         </div>
     </section>
 
     <!-- ---------- CONTACT ---------- -->
     <section id="contact" class="contact">
         <h2>Get In Touch</h2>
-        <p>If you need a quantum-curious engineer with solid teaching experience, let’s talk!</p>
-        <a href="mailto:dennytan@email.com" class="btn primary">Send Email</a>
+        <p>I'd love to hear from you — feel free to reach out anytime for collaborations, questions, or just to say hello!</p>
+        <p class="email-link"><a href="mailto:dennytan885@gmail.com">
+            <!-- mail SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="vertical-align: middle; margin-right: 6px;"><path d="M0 4a2 2 0 012-2h20a2 2 0 012 2v16a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm22 0H2v.511l10 6.25 10-6.25V4zM2 20h20V7.618l-10 6.25-10-6.25V20z"/></svg>
+            dennytan885@gmail.com
+        </a></p>
         <div class="socials">
-            <a href="https://linkedin.com/in/dennytan" target="_blank">LinkedIn</a>
-            <a href="https://github.com/dennytan" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/dennytan-raharjo-67468824b/" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+                <!-- LinkedIn SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.9v2.16h.06c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-7.3c0-1.74-.03-3.98-2.42-3.98-2.42 0-2.79 1.88-2.79 3.82V24h-4V8z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/DenTan77" target="_blank" class="social-link github" aria-label="GitHub">
+                <!-- GitHub SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M12 .297a12 12 0 00-3.79 23.397c.6.111.82-.261.82-.58 0-.288-.011-1.05-.017-2.06-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 016 0c2.29-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.767.84 1.233 1.91 1.233 3.22 0 4.61-2.803 5.625-5.475 5.921.43.37.815 1.096.815 2.21 0 1.596-.014 2.882-.014 3.274 0 .321.218.695.825.578A12.003 12.003 0 0012 .297"/>
+                </svg>
+            </a>
+            <a href="https://instagram.com/dentanr" target="_blank" class="social-link instagram" aria-label="Instagram">
+                <!-- Instagram SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.338 3.608 1.314.975.975 1.251 2.242 1.314 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.338 2.633-1.314 3.608-.975.975-2.242 1.251-3.608 1.314-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.338-3.608-1.314-.975-.975-1.251-2.242-1.314-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.338-2.633 1.314-3.608.975-.975 2.242-1.251 3.608-1.314 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.737 0 8.333.015 7.052.072 5.771.13 4.82.362 4.018.757c-.822.41-1.515 1.103-1.926 1.926-.395.802-.627 1.753-.685 3.034C.015 8.333 0 8.737 0 12s.015 3.667.072 4.948c.058 1.281.29 2.232.685 3.034.41.822 1.103 1.515 1.926 1.926.802.395 1.753.627 3.034.685 1.281.057 1.685.072 4.948.072s3.667-.015 4.948-.072c1.281-.058 2.232-.29 3.034-.685.822-.41 1.515-1.103 1.926-1.926.395-.802.627-1.753.685-3.034.057-1.281.072-1.685.072-4.948s-.015-3.667-.072-4.948c-.058-1.281-.29-2.232-.685-3.034-.41-.822-1.103-1.515-1.926-1.926-.802-.395-1.753-.627-3.034-.685C15.667.015 15.263 0 12 0z"/>
+                    <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998z"/>
+                    <circle cx="18.406" cy="5.594" r="1.44"/>
+                </svg>
+            </a>
         </div>
     </section>
 
+    </main>
+
     <!-- ---------- FOOTER ---------- -->
     <footer>
-        <p>&copy; 2024 Dennytan Raharjo. All rights reserved.</p>
+        <p>&copy; 2026 Dennytan Raharjo. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -214,11 +214,11 @@ section h2 {
 }
 
 .skill-grid {
+    flex: 1 1 420px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* four columns */
-    grid-auto-rows: minmax(80px, auto);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    justify-items: center;
+    perspective: 1000px;
 }
 .skill-card {
     background: var(--card-bg);
@@ -228,12 +228,12 @@ section h2 {
     font-weight: 600;
     backdrop-filter: blur(4px);
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     width: 100%;         /* fill grid cell */
     min-height: 120px;   /* ensure equal height */
-    box-sizing: border-box;
-    word-break: break-word; /* wrap long text */
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
 }
 

@@ -68,7 +68,7 @@ window.addEventListener('scroll',()=>{
         flake.style.animationDelay = '-' + (Math.random() * 4) + 's';
         body.appendChild(flake);
         // remove after animation
-        setTimeout(()=>{ flake.remove(); }, 600000);
+        setTimeout(()=>{ flake.remove(); }, 1200000); // longer before removal
     }
 
     // spawn flakes periodically

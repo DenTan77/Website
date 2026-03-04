@@ -64,11 +64,11 @@ window.addEventListener('scroll',()=>{
         const size = (Math.random() * 1.2 + 0.8).toFixed(2); // larger flakes
         flake.style.fontSize = size + 'rem';
         flake.style.opacity = Math.random() * 0.8 + 0.3;
-        flake.style.animationDuration = (Math.random() * 6 + 6) + 's'; // slower fall
-        flake.style.animationDelay = '-' + (Math.random() * 6) + 's';
+        flake.style.animationDuration = (Math.random() * 4 + 4) + 's'; // faster fall
+        flake.style.animationDelay = '-' + (Math.random() * 4) + 's';
         body.appendChild(flake);
         // remove after animation
-        setTimeout(()=>{ flake.remove(); }, 12000);
+        setTimeout(()=>{ flake.remove(); }, 600000);
     }
 
     // spawn flakes periodically

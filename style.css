@@ -159,7 +159,7 @@ body::before {
     border: 1px solid rgba(0, 194, 255, 0.18);
     border-radius: 16px;
     backdrop-filter: blur(12px);
-    transition: transform .3s ease, box-shadow .3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -169,8 +169,8 @@ body::before {
     gap: 8px;           /* space between h4 and span */
 }
 .cluster-card:hover {
-    transform: translateY(-8px) rotateX(4deg) rotateY(4deg);
-    box-shadow: 0 12px 24px rgba(0, 194, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 194, 255, 0.2);
 }
 .cluster-card h4 {
     font-size: 18px;

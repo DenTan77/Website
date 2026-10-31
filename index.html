@@ -17,6 +17,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experiences">Experiences</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -26,13 +27,13 @@
     <section id="home" class="home">
         <div class="home-left">
             <h1>Hello, I'm <span>Dennytan Raharjo</span></h1>
-            <p>Physics Engineering Student & Research Assistant</p>
+            <p>Undergraduate Physics Engineering</p>
 
 
   <!-- Baris baru: foto + tombol -->
   <div class="hero-row">
     <div class="photo">
-      <img src="./Assets/OIP.jpg" alt="apel">
+      <img src="./Assets/foto.jpg.jpeg" alt="Portrait of Dennytan Raharjo">
     </div>
 
     <div class="btn-box">
@@ -43,7 +44,7 @@
 </div>
         </div>
         <div class="home-right">
-            <div class="cluster-card">
+            <div class="cluster-card blue-hover">
             <h4>Research</h4>
             <span>Material Computation</span>
             </div>
@@ -51,9 +52,9 @@
             <h4>Web Framework</h4>
             <span>React & Next.js</span>
             </div>
-            <div class="cluster-card">
+            <div class="cluster-card blue-hover">
             <h4>Machine Learning</h4>
-            <span>TensorFlow & PyTorch</span>
+            <span>TensorFlow</span>
             </div>
             <div class="cluster-card">
             <h4>Internet of Things</h4>
@@ -66,7 +67,7 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
-            I’m a final-year Physics Engineering student at <strong>Telkom University</strong> with a passion for material computation, instrumentation, and high performance computing (HPC). My research focuses on the electronic and optical properties of 2D materials using first-principles calculations (DFT, GW, and BSE) with tools such as Quantum ESPRESSO and Yambo. I am particularly interested in excitonic effects and quasiparticle band structures. In addition, I apply machine learning techniques to analyze and predict material properties, integrating data-driven approaches with physics-based simulations. Beyond computational research, I also develop IoT based monitoring systems, combining sensors, and web technologies to build practical instrumentation solutions.
+            I’m Undergradute Physics Engineering student from <strong>Telkom University</strong> with a passion for material computation, instrumentation, and high performance computing (HPC). My research focuses on the electronic and optical properties of 2D materials using first-principles calculations (DFT, GW, and BSE) with tools such as Quantum ESPRESSO and Yambo. I am particularly interested in excitonic effects and quasiparticle band structures. In addition, I apply machine learning techniques to analyze and predict material properties, integrating data-driven approaches with physics-based simulations. Beyond computational research, I also develop IoT based monitoring systems, combining sensors, and web technologies to build practical instrumentation solutions.
         </p>
     </section>
 
@@ -74,21 +75,36 @@
     <section id="skills" class="skills">
         <h2>Skills & Tools</h2>
         <div class="skill-grid">
-            <div class="cluster-card">Python</div>
-            <div class="cluster-card">Matlab</div>
-            <div class="cluster-card">C/C++</div>
-            <div class="cluster-card">LaTeX</div>
-            <div class="cluster-card">Arduino</div>
-            <div class="cluster-card">Quantum ESPRESSO</div>
-            <div class="cluster-card">Yambo</div>
-            <div class="cluster-card">Next.js</div>
+            <div class="skill-card blue-hover">C/C++</div>
+            <div class="skill-card blue-hover">Python</div>
+            <div class="skill-card">Next.js</div>
+            <div class="skill-card">Matlab</div>
+            <div class="skill-card blue-hover">C/C++</div>
+            <div class="skill-card">LaTeX</div>
+            <div class="skill-card">Arduino</div>
+            <div class="skill-card blue-hover">Quantum ESPRESSO</div>
+            <div class="skill-card">Yambo</div>
+            <div class="skill-card">Phonopy</div>
+
         </div>
     </section>
 
     <!-- ---------- EXPERIENCES ---------- -->
     <section id="experiences" class="experiences">
         <h2>Experiences</h2>
-        <!-- slider container -->
+
+        <!--
+            Add your experience items here.
+            Copy one <div class="slide"> block and replace:
+            - image source: src="./Assets/your-image.jpg"
+            - title: <h3>...</h3>
+            - date: <span class="date">...</span>
+            - description: <p>...</p>
+
+            If you want more experience slides, duplicate this block below the current ones.
+            The slider will automatically show the next item when the arrow buttons are clicked.
+        -->
+
         <div class="experience-slider">
             <div class="slides">
                 <div class="slide">
@@ -132,6 +148,27 @@
         <div class="slider-nav">
             <button class="prev">&lt;</button>
             <button class="next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- ---------- PROJECTS ---------- -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>Schrödinger Simulation Web</h3>
+                <p>A web-based Schrödinger simulation project.</p>
+                <a href="https://schrodinger-simulation-web.vercel.app/"
+                   target="_blank"
+                   rel="noopener noreferrer">Visit website</a>
+            </article>
+            <article class="project-card">
+                <h3>Hooke Simulation Web</h3>
+                <p>A web-based Hooke's law simulation project.</p>
+                <a href="https://s-imulation-project.vercel.app/"
+                   target="_blank"
+                   rel="noopener noreferrer">Visit website</a>
+            </article>
         </div>
     </section>
 
